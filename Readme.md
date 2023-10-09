@@ -1,37 +1,31 @@
 # Práctica DNS
 
-## Ejemplo de mark down
+1º Docker-compose.yml :
+      Servidor
+         imagen,puertos,volumenes: en carpeta /var/lib/bind // /etc/bind
+         definir ip
+      Cliente
+         imagen
+         definir subred stdin_open: true  # docker run -i
+                         tty: true         # docker run -t
+         dns==ip servidor
+      Network
+         external true
+2º named.conf
+   hacer los includes a los siguientes puntos
 
-`codigo`
-
-**negrita**
-
-_cursiva_
-
-* item1
-* item2
-
-1. item numerado
-1. otro
-1. en el medio
-   * y este tambien?
-1. y este?
+3º named.conf.local 
+      ""base de datos"" guarda los logs en el file que indiques
 
 
-> esto es una cita
+4º Crear el file que describimos anteriormente en la ruta indicada.
 
----
+5º named.conf.options
+      aqui indicamos DNSs que se guardaran en cache
+      ruta /var/cache/bind
+      forwarders -- dns que queramos
+      listen on any
 
-[esto es un link](http://www.google.com)
 
-Una imagen (que está en el repositorio)
 
-![Yoda](./imagenes/captura.png)
 
-Varias lineas de codigo
-
-```
-una linea
-otra
-y otra mas
-```
