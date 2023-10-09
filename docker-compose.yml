@@ -7,7 +7,7 @@ services:
       - 53:53/udp
     networks:
       bind9_subnet:
-        ipv4_address: 10.1.0.254
+        ipv4_address: 172.19.0.254
     volumes:
       - ./conf:/etc/bind
       - ./zonas:/var/lib/bind

@@ -26,6 +26,7 @@
       forwarders -- dns que queramos
       listen on any
 
-
+6º crear la red en docker
+   docker network create bind9_subnet
 
 
