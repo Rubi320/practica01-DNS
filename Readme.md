@@ -39,6 +39,7 @@
 
 7º comprobamos(desde el cliente)
 
+  apk add --no-cache bind-tools (alpine)
   ping 172.28.5.1
   dig @172.28.5.1 test.asircastelao.int 
 
