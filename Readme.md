@@ -2,11 +2,12 @@
 
 1º Docker-compose.yml :
       Servidor
-         imagen,puertos,volumenes: en carpeta /var/lib/bind // /etc/bind
-         definir ip
+         imagen,puertos,volumenes: carpetas /var/lib/bind // /etc/bind
+         definir ip y subred
+
       Cliente
          imagen
-         definir subred stdin_open: true  # docker run -i
+         subred stdin_open: true  # docker run -i
                          tty: true         # docker run -t
          dns==ip servidor
       Network
