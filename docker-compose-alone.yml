@@ -1,0 +1,11 @@
+services:
+  asir-asir_cliente2:
+    container_name: asir_cliente2
+    image: alpine
+    platform:
+    stdin_open: true # docker run -i
+    tty: true # docker run -t
+ 
+networks:
+  bind9_subnet:
+    external: true
