@@ -2,20 +2,20 @@
 
 1. Docker-compose.yml :
       *Servidor*
-         ***
-         imagen,puertos,volumenes: >carpetas /var/lib/bind // /etc/bind
-         definir ip y subred
-         ***
+        
+       - imagen,puertos,volumenes: >carpetas /var/lib/bind // /etc/bind
+       -  definir ip y subred
+        
       *Cliente*
-         ***
-         imagen
-         subred          stdin_open: true  # docker run -i
+         
+        - imagen
+        - subred          stdin_open: true  # docker run -i
                          tty: true         # docker run -t
-         definir una ip distinta del server
-         dns==ip servidor
-         Network
+        - definir una ip distinta del server
+        - dns==ip servidor
+        - Network
             external true
-         ***
+         
 2. named.conf
    ***
    hacer los includes a los siguientes puntos
@@ -41,7 +41,7 @@
 
 7. comprobamos(desde el cliente)
 ***
-  apk add --no-cache bind-tools (alpine)
-  ping 172.28.5.1
-  dig @172.28.5.1 test.asircastelao.int 
+  - apk add --no-cache bind-tools (alpine)
+  - ping 172.28.5.1
+  - dig @172.28.5.1 test.asircastelao.int 
 ***
