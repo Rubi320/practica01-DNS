@@ -17,10 +17,10 @@ services:
   
   asir_cliente:
     container_name: asir_cliente
-    image: ubuntu:lastest
+    image: ubuntu
     networks:
       bind9_subnet:
-        ipv4_address: 172.28.5.2
+        ipv4_address: 172.28.5.10
     stdin_open: true # docker run -i
     tty: true # docker run -t
     dns:
