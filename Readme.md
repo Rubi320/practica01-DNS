@@ -1,6 +1,7 @@
 # Práctica DNS
 
 1. Docker-compose.yml :
+      
       *Servidor*
         
        - imagen,puertos,volumenes: >carpetas /var/lib/bind // /etc/bind
@@ -45,3 +46,13 @@
   - ping 172.28.5.1
   - dig @172.28.5.1 test.asircastelao.int 
 ***
+
+8. probamos a conectarnos desde un cliente apartado
+
+   ***
+   en este caso es ubuntu:
+      
+      - echo "nameserver 172.28.5.1" > /etc/resolv.conf
+      - ping www.google.com
+
+   ***

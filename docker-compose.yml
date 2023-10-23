@@ -14,9 +14,10 @@ services:
     volumes:
       - ./conf:/etc/bind
       - ./zonas:/var/lib/bind
+  
   asir_cliente:
     container_name: asir_cliente
-    image: alpine
+    image: ubuntu:lastest
     networks:
       bind9_subnet:
         ipv4_address: 172.28.5.2
