@@ -25,6 +25,8 @@ services:
     tty: true # docker run -t
     dns:
       - 172.28.5.1 # el contenedor dns server
+
+
 networks:
   bind9_subnet:
     external: true
